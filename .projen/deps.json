@@ -1,6 +1,11 @@
 {
   "dependencies": [
     {
+      "name": "@cdktf/provider-aws",
+      "version": "7.0.45",
+      "type": "build"
+    },
+    {
       "name": "@types/jest",
       "type": "build"
     },
@@ -21,12 +26,12 @@
     },
     {
       "name": "cdktf-cli",
-      "version": "^0.10.1",
+      "version": "^0.10.4",
       "type": "build"
     },
     {
       "name": "cdktf",
-      "version": "0.10.1",
+      "version": "0.10.4",
       "type": "build"
     },
     {
@@ -125,8 +130,13 @@
       "type": "build"
     },
     {
+      "name": "@cdktf/provider-aws",
+      "version": "^7.0.45",
+      "type": "peer"
+    },
+    {
       "name": "cdktf",
-      "version": "^0.10.1",
+      "version": "^0.10.4",
       "type": "peer"
     },
     {

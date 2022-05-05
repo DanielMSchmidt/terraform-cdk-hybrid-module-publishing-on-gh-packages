@@ -158,6 +158,18 @@
       "steps": [
         {
           "spawn": "package:js"
+        },
+        {
+          "spawn": "package:java"
+        }
+      ]
+    },
+    "package:java": {
+      "name": "package:java",
+      "description": "Create java language bindings",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -v --target java"
         }
       ]
     },
@@ -222,6 +234,10 @@
           "spawn": "eslint"
         },
         {
+          "exec": "cdktf synth",
+          "cwd": "./examples/constructs"
+        },
+        {
           "exec": "./scripts/tf-module-test.sh"
         }
       ]
@@ -271,19 +287,19 @@
           "exec": "yarn upgrade npm-check-updates"
         },
         {
-          "exec": "npm-check-updates --dep dev --upgrade --target=minor --reject='cdktf,constructs'"
+          "exec": "npm-check-updates --dep dev --upgrade --target=minor --reject='@cdktf/provider-aws,cdktf,constructs'"
         },
         {
-          "exec": "npm-check-updates --dep optional --upgrade --target=minor --reject='cdktf,constructs'"
+          "exec": "npm-check-updates --dep optional --upgrade --target=minor --reject='@cdktf/provider-aws,cdktf,constructs'"
         },
         {
-          "exec": "npm-check-updates --dep peer --upgrade --target=minor --reject='cdktf,constructs'"
+          "exec": "npm-check-updates --dep peer --upgrade --target=minor --reject='@cdktf/provider-aws,cdktf,constructs'"
         },
         {
-          "exec": "npm-check-updates --dep prod --upgrade --target=minor --reject='cdktf,constructs'"
+          "exec": "npm-check-updates --dep prod --upgrade --target=minor --reject='@cdktf/provider-aws,cdktf,constructs'"
         },
         {
-          "exec": "npm-check-updates --dep bundle --upgrade --target=minor --reject='cdktf,constructs'"
+          "exec": "npm-check-updates --dep bundle --upgrade --target=minor --reject='@cdktf/provider-aws,cdktf,constructs'"
         },
         {
           "exec": "yarn install --check-files"

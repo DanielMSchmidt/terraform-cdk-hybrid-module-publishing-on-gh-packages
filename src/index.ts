@@ -1,11 +1,54 @@
+import {
+  LambdaFunction,
+  DataAwsLambdaFunction,
+} from "@cdktf/provider-aws/lib/lambdafunction";
 import { Construct } from "constructs";
+import { S3Bucket as S3BucketModule } from "./.gen/modules/terraform-aws-modules/aws/s3-bucket";
 
-export interface MyConstructOptions {
-  readonly propertyA: string;
+import { Notification } from "./.gen/modules/terraform-aws-modules/aws/s3-bucket/modules/notification";
+
+export interface S3BucketOptions {
+  // Name of the bucket
+  readonly bucket: string;
 }
 
-export class MyConstruct extends Construct {
-  constructor(scope: Construct, id: string, public config: MyConstructOptions) {
+export interface NotificationOptions {
+  readonly filterPrefix?: string;
+  readonly filterSuffix?: string;
+}
+
+export class S3Bucket extends Construct {
+  public s3Module: S3BucketModule;
+  constructor(scope: Construct, id: string, public config: S3BucketOptions) {
     super(scope, id);
+
+    this.s3Module = new S3BucketModule(this, "bucket", {
+      ...config,
+      forceDestroy: true,
+    });
+  }
+
+  public notifyLambda(
+    lambda: LambdaFunction | DataAwsLambdaFunction,
+    eventType: "Put" | "Post" | "Delete",
+    options: NotificationOptions = {}
+  ) {
+    new Notification(this, "notification", {
+      bucket: this.s3Module.s3BucketIdOutput,
+      eventbridge: true,
+      lambdaNotifications: [
+        {
+          lambda: {
+            ...options,
+            function_arn: lambda.arn,
+            function_name: lambda.functionName,
+            event_type:
+              eventType === "Delete"
+                ? `s3:ObjectRemoved:${eventType}`
+                : `s3:ObjectCreated:${eventType}`,
+          },
+        },
+      ],
+    });
   }
 }

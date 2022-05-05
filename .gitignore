@@ -52,6 +52,9 @@ junit.xml
 .jsii
 tsconfig.json
 !/API.md
+./examples/terraform/.terraform
+./examples/terraform/.terraform.lock.hcl
+./examples/constructs/cdktf.out
 src/.gen
 src/cdktf.out
 src/modules

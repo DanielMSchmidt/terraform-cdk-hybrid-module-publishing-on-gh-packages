@@ -1,10 +1,11 @@
 {
   "language": "typescript",
   "app": "npx ts-node tfModules.ts",
-  "terraformProviders": [
-    "hashicorp/null@3.1.1"
+  "terraformProviders": [],
+  "terraformModules": [
+    "terraform-aws-modules/s3-bucket/aws",
+    "terraform-aws-modules/s3-bucket/aws//modules/notification"
   ],
-  "terraformModules": [],
   "output": "modules",
   "projectId": "425d04d6-b6d2-4aaa-9c58-438eac4ea6fc"
 }

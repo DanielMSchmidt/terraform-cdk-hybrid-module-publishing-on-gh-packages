@@ -69,6 +69,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
+      packages: write
     if: needs.release.outputs.latest_commit == github.sha
     steps:
       - uses: actions/setup-node@v2
@@ -91,5 +92,41 @@ jobs:
         run: npx -p publib@latest publib-npm
         env:
           NPM_DIST_TAG: latest
-          NPM_REGISTRY: registry.npmjs.org
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_REGISTRY: npm.pkg.github.com
+          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  release_maven:
+    name: Publish to Maven Central
+    needs: release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    if: needs.release.outputs.latest_commit == github.sha
+    steps:
+      - uses: actions/setup-java@v2
+        with:
+          distribution: temurin
+          java-version: 11.x
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+      - name: Download build artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: build-artifact
+          path: dist
+      - name: Prepare Repository
+        run: mv dist .repo
+      - name: Install Dependencies
+        run: cd .repo && yarn install --check-files --frozen-lockfile
+      - name: Create java artifact
+        run: cd .repo && npx projen package:java
+      - name: Collect java Artifact
+        run: mv .repo/dist dist
+      - name: Release
+        run: npx -p publib@latest publib-maven
+        env:
+          MAVEN_SERVER_ID: github
+          MAVEN_REPOSITORY_URL: https://maven.pkg.github.com
+          MAVEN_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
+          MAVEN_USERNAME: ${{ github.actor }}
