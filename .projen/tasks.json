@@ -234,11 +234,11 @@
           "spawn": "eslint"
         },
         {
-          "exec": "cdktf synth",
-          "cwd": "./examples/constructs"
+          "exec": "./scripts/tf-module-test.sh"
         },
         {
-          "exec": "./scripts/tf-module-test.sh"
+          "exec": "cdktf synth",
+          "cwd": "examples/constructs"
         }
       ]
     },

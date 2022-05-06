@@ -55,13 +55,13 @@
     "jest-junit": "^13",
     "jsii": "^1.57.0",
     "jsii-diff": "^1.57.0",
-    "jsii-docgen": "^7.0.2",
+    "jsii-docgen": "^7.0.3",
     "jsii-pacmak": "^1.57.0",
     "json-schema": "^0.4.0",
     "npm-check-updates": "^12",
     "prettier": "^2.6.2",
-    "projen": "^0.55.7",
-    "projen-cdktf-hybrid-construct": "^0.1.55",
+    "projen": "^0.55.9",
+    "projen-cdktf-hybrid-construct": "^0.1.59",
     "standard-version": "^9",
     "ts-jest": "^27",
     "ts-node": "^10.7.0",
@@ -73,7 +73,7 @@
     "constructs": "^10.0.107"
   },
   "dependencies": {
-    "cdktf-tf-module-stack": "^0.0.52"
+    "cdktf-tf-module-stack": "^0.0.53"
   },
   "keywords": [
     "cdk",
@@ -104,13 +104,13 @@
     "coverageDirectory": "coverage",
     "coveragePathIgnorePatterns": [
       "/node_modules/",
-      "dist",
-      "terraform"
+      "examples/terraform",
+      "dist"
     ],
     "testPathIgnorePatterns": [
       "/node_modules/",
-      "dist",
-      "terraform"
+      "examples/terraform",
+      "dist"
     ],
     "watchPathIgnorePatterns": [
       "/node_modules/"

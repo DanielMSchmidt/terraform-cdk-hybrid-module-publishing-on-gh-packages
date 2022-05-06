@@ -52,11 +52,11 @@ junit.xml
 .jsii
 tsconfig.json
 !/API.md
-./examples/terraform/.terraform
-./examples/terraform/.terraform.lock.hcl
-./examples/constructs/cdktf.out
+examples/terraform/.terraform
+examples/terraform/.terraform.lock.hcl
+!/./scripts/tf-module-test.sh
+examples/constructs/cdktf.out
 src/.gen
 src/cdktf.out
 src/modules
 !/scripts/copy-modules.sh
-!/./scripts/tf-module-test.sh

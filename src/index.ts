@@ -19,6 +19,7 @@ export interface NotificationOptions {
 
 export class S3Bucket extends Construct {
   public s3Module: S3BucketModule;
+  private constructIndex = 0;
   constructor(scope: Construct, id: string, public config: S3BucketOptions) {
     super(scope, id);
 
@@ -33,7 +34,8 @@ export class S3Bucket extends Construct {
     eventType: "Put" | "Post" | "Delete",
     options: NotificationOptions = {}
   ) {
-    new Notification(this, "notification", {
+    const id = this.constructIndex++;
+    new Notification(this, `notification-${id}`, {
       bucket: this.s3Module.s3BucketIdOutput,
       eventbridge: true,
       lambdaNotifications: [

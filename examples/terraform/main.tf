@@ -10,4 +10,9 @@ terraform {
 
 # Initialize your provider here
 
-            
+module "my_bucket_module" {
+  source = "../../modules/s3-bucket-trigger-on-file-create"
+
+  bucket_name          = "my-bucket"
+  lambda_function_name = "my-lambda-function"
+}

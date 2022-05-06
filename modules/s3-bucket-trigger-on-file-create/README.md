@@ -29,7 +29,7 @@ module "my_file_upload_trigger" {
 | Name | Source | Version |
 |------|--------|---------|
 | <a name="module_s3buckettriggeronfilecreate_s3bucket_EDD4003A"></a> [s3buckettriggeronfilecreate\_s3bucket\_EDD4003A](#module\_s3buckettriggeronfilecreate\_s3bucket\_EDD4003A) | terraform-aws-modules/s3-bucket/aws | n/a |
-| <a name="module_s3buckettriggeronfilecreate_s3bucket_notification_9C650482"></a> [s3buckettriggeronfilecreate\_s3bucket\_notification\_9C650482](#module\_s3buckettriggeronfilecreate\_s3bucket\_notification\_9C650482) | terraform-aws-modules/s3-bucket/aws//modules/notification | n/a |
+| <a name="module_s3buckettriggeronfilecreate_s3bucket_notification0_5CA04471"></a> [s3buckettriggeronfilecreate\_s3bucket\_notification0\_5CA04471](#module\_s3buckettriggeronfilecreate\_s3bucket\_notification0\_5CA04471) | terraform-aws-modules/s3-bucket/aws//modules/notification | n/a |
 
 ## Resources
 

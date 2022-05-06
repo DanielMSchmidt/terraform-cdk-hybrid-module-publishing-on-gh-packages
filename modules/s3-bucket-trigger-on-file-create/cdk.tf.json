@@ -33,11 +33,11 @@
       "force_destroy": true,
       "source": "terraform-aws-modules/s3-bucket/aws"
     },
-    "s3buckettriggeronfilecreate_s3bucket_notification_9C650482": {
+    "s3buckettriggeronfilecreate_s3bucket_notification0_5CA04471": {
       "//": {
         "metadata": {
-          "path": "s3-bucket-trigger-on-file-create/s3_bucket/notification",
-          "uniqueId": "s3buckettriggeronfilecreate_s3bucket_notification_9C650482"
+          "path": "s3-bucket-trigger-on-file-create/s3_bucket/notification-0",
+          "uniqueId": "s3buckettriggeronfilecreate_s3bucket_notification0_5CA04471"
         }
       },
       "bucket": "${module.s3buckettriggeronfilecreate_s3bucket_EDD4003A.s3_bucket_id}",

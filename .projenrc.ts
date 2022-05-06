@@ -2,6 +2,7 @@ import {
   HybridModule,
   publishToGithubPackages,
 } from "projen-cdktf-hybrid-construct";
+
 const project = new HybridModule({
   author: "Daniel Schmidt",
   authorAddress: "danielmschmidt92@gmail.com",
@@ -14,12 +15,16 @@ const project = new HybridModule({
   cdktfVersion: "^0.10.4",
   constructExamples: {
     enabled: true,
-    folder: "./examples/constructs",
+    folder: "examples/constructs",
   },
   terraformExamples: {
     enabled: true,
-    folder: "./examples/terraform",
-    providerConfig: "",
+    folder: "examples/terraform",
+    providerConfig: `   
+provider "aws" {
+  region = "eu-central-1"
+}
+  `,
   },
   ...publishToGithubPackages({
     name: "terraform-cdk-hybrid-module-publishing-on-gh-packages",

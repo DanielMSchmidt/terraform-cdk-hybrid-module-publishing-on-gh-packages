@@ -1,8 +1,3 @@
-# Please add here some pure HCL tests for your modules in order to test HCL Interoperability
+# Terraform examples
 
-Examples:
-
-module "my_awesome_test" {
-  source = "../modules/my-awesome-modules"
-  ...variables...
-}
+See [main.tf](./main.tf).

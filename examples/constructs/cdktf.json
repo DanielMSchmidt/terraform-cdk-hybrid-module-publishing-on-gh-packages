@@ -1,5 +1,5 @@
 {
   "language": "typescript",
-  "app": "npx ts-node --project ../tsconfig.dev.json index.ts",
+  "app": "npx ts-node --project ../../tsconfig.dev.json index.ts",
   "projectId": "a2847e32-4f16-4f6a-a26b-1ca2902f0ad2"
 }
