@@ -1,4 +1,5 @@
 // import { AwsProvider } from "@cdktf/provider-aws";
+import { AwsProvider } from "@cdktf/provider-aws";
 import { DataAwsLambdaFunction } from "@cdktf/provider-aws/lib/lambdafunction";
 import { App } from "cdktf";
 import { TFModuleStack, TFModuleVariable } from "cdktf-tf-module-stack";
@@ -10,9 +11,9 @@ class S3BucketTriggerOnFileCreate extends TFModuleStack {
     super(scope, id);
 
     // This going to be stripped from the result
-    // new AwsProvider(this, "aws", {
-    //   region: "us-east-1",
-    // });
+    new AwsProvider(this, "aws", {
+      region: "us-east-1",
+    });
     const bucketName = new TFModuleVariable(this, "bucket_name", {
       type: "string",
       nullable: false,

@@ -4,7 +4,6 @@ import {
 } from "@cdktf/provider-aws/lib/lambdafunction";
 import { Construct } from "constructs";
 import { S3Bucket as S3BucketModule } from "./.gen/modules/terraform-aws-modules/aws/s3-bucket";
-
 import { Notification } from "./.gen/modules/terraform-aws-modules/aws/s3-bucket/modules/notification";
 
 export interface S3BucketOptions {
