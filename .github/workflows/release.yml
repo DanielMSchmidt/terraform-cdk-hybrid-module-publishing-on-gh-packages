@@ -127,6 +127,6 @@ jobs:
         run: npx -p publib@latest publib-maven
         env:
           MAVEN_SERVER_ID: github
-          MAVEN_REPOSITORY_URL: https://maven.pkg.github.com
+          MAVEN_REPOSITORY_URL: https://maven.pkg.github.com/danielmschmidt/terraform-cdk-hybrid-module-publishing-on-gh-packages
           MAVEN_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
           MAVEN_USERNAME: ${{ github.actor }}

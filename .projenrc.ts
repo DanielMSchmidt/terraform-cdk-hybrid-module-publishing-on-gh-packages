@@ -10,6 +10,8 @@ const publishConfig = publishToGithubPackages({
 });
 
 publishConfig.publishToMaven!.javaPackage = "com.danielmschmidt.cdktf";
+publishConfig.publishToMaven!.mavenRepositoryUrl =
+  "https://maven.pkg.github.com/danielmschmidt/terraform-cdk-hybrid-module-publishing-on-gh-packages";
 
 console.log(publishConfig);
 
