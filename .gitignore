@@ -52,6 +52,7 @@ junit.xml
 .jsii
 tsconfig.json
 !/API.md
+!/examples/terraform/provider.tf
 examples/terraform/.terraform
 examples/terraform/.terraform.lock.hcl
 !/./scripts/tf-module-test.sh
