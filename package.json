@@ -1,5 +1,5 @@
 {
-  "name": "@danielmschmidt/cdktf-s3-hybrid-module",
+  "name": "@danielmschmidt/terraform-cdk-hybrid-module-publishing-on-gh-packages",
   "repository": {
     "type": "git",
     "url": "https://github.com/danielmschmidt/terraform-cdk-hybrid-module-publishing-on-gh-packages.git"
@@ -61,7 +61,7 @@
     "npm-check-updates": "^12",
     "prettier": "^2.6.2",
     "projen": "^0.55.12",
-    "projen-cdktf-hybrid-construct": "^0.1.65",
+    "projen-cdktf-hybrid-construct": "^0.1.66",
     "standard-version": "^9",
     "ts-jest": "^27",
     "ts-node": "^10.7.0",
@@ -140,10 +140,10 @@
     "outdir": "dist",
     "targets": {
       "java": {
-        "package": "com.danielmschmidt.cdktf",
+        "package": "com.danielmschmidt.terraform_cdk_hybrid_module_publishing_on_gh_packages",
         "maven": {
-          "groupId": "com.DanielMSchmidt",
-          "artifactId": "cdktf_s3_hybrid_module"
+          "groupId": "com.danielmschmidt",
+          "artifactId": "terraform_cdk_hybrid_module_publishing_on_gh_packages"
         }
       }
     },

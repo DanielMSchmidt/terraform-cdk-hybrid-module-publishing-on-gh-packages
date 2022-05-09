@@ -5383,10 +5383,10 @@ progress@^2.0.3:
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
-projen-cdktf-hybrid-construct@^0.1.65:
-  version "0.1.65"
-  resolved "https://registry.yarnpkg.com/projen-cdktf-hybrid-construct/-/projen-cdktf-hybrid-construct-0.1.65.tgz#282cb8aaa90a05f914ca3b8019ef4f0583dfde33"
-  integrity sha512-vuRIG+s4nqezfrB7k+MI+yHX3bFfRlw5T4mU0yEyJmTJ/pcGJRQaB7IW31kSRDlgdXgSZ3pgOPqzAz82JvT2yg==
+projen-cdktf-hybrid-construct@^0.1.66:
+  version "0.1.66"
+  resolved "https://registry.yarnpkg.com/projen-cdktf-hybrid-construct/-/projen-cdktf-hybrid-construct-0.1.66.tgz#4a4ee79026c4b3b806a3cbea38aedfb5bd5182cf"
+  integrity sha512-DIqMsgrB5HvXMlSAMG/PtEVdXkQZYfPet6sx95NOftctHqLV180h4nnZPngbparCtGFNeH842OK5Td+m2D0AJQ==
   dependencies:
     change-case "^4.1.2"
 
