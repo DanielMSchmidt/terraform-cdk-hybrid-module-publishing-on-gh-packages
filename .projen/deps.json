@@ -130,6 +130,10 @@
       "type": "build"
     },
     {
+      "name": "cdktf-tf-module-stack",
+      "type": "bundled"
+    },
+    {
       "name": "@cdktf/provider-aws",
       "version": "^7.0.45",
       "type": "peer"

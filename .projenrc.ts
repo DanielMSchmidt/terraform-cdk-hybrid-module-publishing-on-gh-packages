@@ -3,12 +3,22 @@ import {
   publishToGithubPackages,
 } from "projen-cdktf-hybrid-construct";
 
+const publishConfig = publishToGithubPackages({
+  name: "cdktf-s3-hybrid-module",
+  namespace: "DanielMSchmidt",
+  registries: ["npm", "maven"],
+});
+
+publishConfig.publishToMaven!.javaPackage = "com.danielmschmidt.cdktf";
+
+console.log(publishConfig);
+
 const project = new HybridModule({
   author: "Daniel Schmidt",
   authorAddress: "danielmschmidt92@gmail.com",
   defaultReleaseBranch: "main",
   devDeps: ["projen-cdktf-hybrid-construct"],
-  name: "terraform-cdk-hybrid-module-publishing-on-gh-packages",
+  name: "@DanielMSchmidt/cdktf-s3-hybrid-module",
   repositoryUrl:
     "https://github.com/danielmschmidt92/terraform-cdk-hybrid-module-publishing-on-gh-packages.git",
 
@@ -26,15 +36,11 @@ provider "aws" {
 }
   `,
   },
-  ...publishToGithubPackages({
-    name: "terraform-cdk-hybrid-module-publishing-on-gh-packages",
-    namespace: "DanielMSchmidt",
-    registries: ["npm", "maven"],
-  }),
+  ...publishConfig,
 });
 
+project.addBundledDeps("cdktf-tf-module-stack");
 project.addPeerDeps("cdktf@^0.10.4");
-
 project.addPeerDeps("@cdktf/provider-aws@^7.0.45");
 
 project.synth();

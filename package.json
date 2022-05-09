@@ -1,5 +1,5 @@
 {
-  "name": "terraform-cdk-hybrid-module-publishing-on-gh-packages",
+  "name": "@DanielMSchmidt/cdktf-s3-hybrid-module",
   "repository": {
     "type": "git",
     "url": "https://github.com/danielmschmidt92/terraform-cdk-hybrid-module-publishing-on-gh-packages.git"
@@ -75,6 +75,9 @@
   "dependencies": {
     "cdktf-tf-module-stack": "^0.0.57"
   },
+  "bundledDependencies": [
+    "cdktf-tf-module-stack"
+  ],
   "keywords": [
     "cdk",
     "cdktf",
@@ -137,10 +140,10 @@
     "outdir": "dist",
     "targets": {
       "java": {
-        "package": "com.DanielMSchmidt.terraform_cdk_hybrid_module_publishing_on_gh_packages",
+        "package": "com.danielmschmidt.cdktf",
         "maven": {
           "groupId": "com.DanielMSchmidt",
-          "artifactId": "terraform_cdk_hybrid_module_publishing_on_gh_packages"
+          "artifactId": "cdktf_s3_hybrid_module"
         }
       }
     },
