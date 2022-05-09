@@ -18,9 +18,9 @@ const project = new HybridModule({
   authorAddress: "danielmschmidt92@gmail.com",
   defaultReleaseBranch: "main",
   devDeps: ["projen-cdktf-hybrid-construct"],
-  name: "@DanielMSchmidt/cdktf-s3-hybrid-module",
+  name: "@danielmschmidt/cdktf-s3-hybrid-module",
   repositoryUrl:
-    "https://github.com/danielmschmidt92/terraform-cdk-hybrid-module-publishing-on-gh-packages.git",
+    "https://github.com/danielmschmidt/terraform-cdk-hybrid-module-publishing-on-gh-packages.git",
 
   cdktfVersion: "^0.10.4",
   constructExamples: {

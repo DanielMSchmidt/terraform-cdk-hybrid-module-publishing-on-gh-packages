@@ -2,39 +2,39 @@
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
 
-### S3Bucket <a name="S3Bucket" id="@DanielMSchmidt/cdktf-s3-hybrid-module.S3Bucket"></a>
+### S3Bucket <a name="S3Bucket" id="@danielmschmidt/cdktf-s3-hybrid-module.S3Bucket"></a>
 
-#### Initializers <a name="Initializers" id="@DanielMSchmidt/cdktf-s3-hybrid-module.S3Bucket.Initializer"></a>
+#### Initializers <a name="Initializers" id="@danielmschmidt/cdktf-s3-hybrid-module.S3Bucket.Initializer"></a>
 
 ```typescript
-import { S3Bucket } from '@DanielMSchmidt/cdktf-s3-hybrid-module'
+import { S3Bucket } from '@danielmschmidt/cdktf-s3-hybrid-module'
 
 new S3Bucket(scope: Construct, id: string, config: S3BucketOptions)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@DanielMSchmidt/cdktf-s3-hybrid-module.S3Bucket.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
-| <code><a href="#@DanielMSchmidt/cdktf-s3-hybrid-module.S3Bucket.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@DanielMSchmidt/cdktf-s3-hybrid-module.S3Bucket.Initializer.parameter.config">config</a></code> | <code><a href="#@DanielMSchmidt/cdktf-s3-hybrid-module.S3BucketOptions">S3BucketOptions</a></code> | *No description.* |
+| <code><a href="#@danielmschmidt/cdktf-s3-hybrid-module.S3Bucket.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#@danielmschmidt/cdktf-s3-hybrid-module.S3Bucket.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@danielmschmidt/cdktf-s3-hybrid-module.S3Bucket.Initializer.parameter.config">config</a></code> | <code><a href="#@danielmschmidt/cdktf-s3-hybrid-module.S3BucketOptions">S3BucketOptions</a></code> | *No description.* |
 
 ---
 
-##### `scope`<sup>Required</sup> <a name="scope" id="@DanielMSchmidt/cdktf-s3-hybrid-module.S3Bucket.Initializer.parameter.scope"></a>
+##### `scope`<sup>Required</sup> <a name="scope" id="@danielmschmidt/cdktf-s3-hybrid-module.S3Bucket.Initializer.parameter.scope"></a>
 
 - *Type:* constructs.Construct
 
 ---
 
-##### `id`<sup>Required</sup> <a name="id" id="@DanielMSchmidt/cdktf-s3-hybrid-module.S3Bucket.Initializer.parameter.id"></a>
+##### `id`<sup>Required</sup> <a name="id" id="@danielmschmidt/cdktf-s3-hybrid-module.S3Bucket.Initializer.parameter.id"></a>
 
 - *Type:* string
 
 ---
 
-##### `config`<sup>Required</sup> <a name="config" id="@DanielMSchmidt/cdktf-s3-hybrid-module.S3Bucket.Initializer.parameter.config"></a>
+##### `config`<sup>Required</sup> <a name="config" id="@danielmschmidt/cdktf-s3-hybrid-module.S3Bucket.Initializer.parameter.config"></a>
 
-- *Type:* <a href="#@DanielMSchmidt/cdktf-s3-hybrid-module.S3BucketOptions">S3BucketOptions</a>
+- *Type:* <a href="#@danielmschmidt/cdktf-s3-hybrid-module.S3BucketOptions">S3BucketOptions</a>
 
 ---
 
@@ -42,12 +42,12 @@ new S3Bucket(scope: Construct, id: string, config: S3BucketOptions)
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@DanielMSchmidt/cdktf-s3-hybrid-module.S3Bucket.toString">toString</a></code> | Returns a string representation of this construct. |
-| <code><a href="#@DanielMSchmidt/cdktf-s3-hybrid-module.S3Bucket.notifyLambda">notifyLambda</a></code> | *No description.* |
+| <code><a href="#@danielmschmidt/cdktf-s3-hybrid-module.S3Bucket.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#@danielmschmidt/cdktf-s3-hybrid-module.S3Bucket.notifyLambda">notifyLambda</a></code> | *No description.* |
 
 ---
 
-##### `toString` <a name="toString" id="@DanielMSchmidt/cdktf-s3-hybrid-module.S3Bucket.toString"></a>
+##### `toString` <a name="toString" id="@danielmschmidt/cdktf-s3-hybrid-module.S3Bucket.toString"></a>
 
 ```typescript
 public toString(): string
@@ -55,27 +55,27 @@ public toString(): string
 
 Returns a string representation of this construct.
 
-##### `notifyLambda` <a name="notifyLambda" id="@DanielMSchmidt/cdktf-s3-hybrid-module.S3Bucket.notifyLambda"></a>
+##### `notifyLambda` <a name="notifyLambda" id="@danielmschmidt/cdktf-s3-hybrid-module.S3Bucket.notifyLambda"></a>
 
 ```typescript
 public notifyLambda(lambda: LambdaFunction | DataAwsLambdaFunction, eventType: string, options?: NotificationOptions): void
 ```
 
-###### `lambda`<sup>Required</sup> <a name="lambda" id="@DanielMSchmidt/cdktf-s3-hybrid-module.S3Bucket.notifyLambda.parameter.lambda"></a>
+###### `lambda`<sup>Required</sup> <a name="lambda" id="@danielmschmidt/cdktf-s3-hybrid-module.S3Bucket.notifyLambda.parameter.lambda"></a>
 
 - *Type:* @cdktf/provider-aws.lambdafunction.LambdaFunction | @cdktf/provider-aws.lambdafunction.DataAwsLambdaFunction
 
 ---
 
-###### `eventType`<sup>Required</sup> <a name="eventType" id="@DanielMSchmidt/cdktf-s3-hybrid-module.S3Bucket.notifyLambda.parameter.eventType"></a>
+###### `eventType`<sup>Required</sup> <a name="eventType" id="@danielmschmidt/cdktf-s3-hybrid-module.S3Bucket.notifyLambda.parameter.eventType"></a>
 
 - *Type:* string
 
 ---
 
-###### `options`<sup>Optional</sup> <a name="options" id="@DanielMSchmidt/cdktf-s3-hybrid-module.S3Bucket.notifyLambda.parameter.options"></a>
+###### `options`<sup>Optional</sup> <a name="options" id="@danielmschmidt/cdktf-s3-hybrid-module.S3Bucket.notifyLambda.parameter.options"></a>
 
-- *Type:* <a href="#@DanielMSchmidt/cdktf-s3-hybrid-module.NotificationOptions">NotificationOptions</a>
+- *Type:* <a href="#@danielmschmidt/cdktf-s3-hybrid-module.NotificationOptions">NotificationOptions</a>
 
 ---
 
@@ -83,14 +83,14 @@ public notifyLambda(lambda: LambdaFunction | DataAwsLambdaFunction, eventType: s
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@DanielMSchmidt/cdktf-s3-hybrid-module.S3Bucket.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#@danielmschmidt/cdktf-s3-hybrid-module.S3Bucket.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
 
 ---
 
-##### `isConstruct` <a name="isConstruct" id="@DanielMSchmidt/cdktf-s3-hybrid-module.S3Bucket.isConstruct"></a>
+##### `isConstruct` <a name="isConstruct" id="@danielmschmidt/cdktf-s3-hybrid-module.S3Bucket.isConstruct"></a>
 
 ```typescript
-import { S3Bucket } from '@DanielMSchmidt/cdktf-s3-hybrid-module'
+import { S3Bucket } from '@danielmschmidt/cdktf-s3-hybrid-module'
 
 S3Bucket.isConstruct(x: any)
 ```
@@ -111,7 +111,7 @@ library can be accidentally installed, and `instanceof` will behave
 unpredictably. It is safest to avoid using `instanceof`, and using
 this type-testing method instead.
 
-###### `x`<sup>Required</sup> <a name="x" id="@DanielMSchmidt/cdktf-s3-hybrid-module.S3Bucket.isConstruct.parameter.x"></a>
+###### `x`<sup>Required</sup> <a name="x" id="@danielmschmidt/cdktf-s3-hybrid-module.S3Bucket.isConstruct.parameter.x"></a>
 
 - *Type:* any
 
@@ -123,13 +123,13 @@ Any object.
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@DanielMSchmidt/cdktf-s3-hybrid-module.S3Bucket.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
-| <code><a href="#@DanielMSchmidt/cdktf-s3-hybrid-module.S3Bucket.property.config">config</a></code> | <code><a href="#@DanielMSchmidt/cdktf-s3-hybrid-module.S3BucketOptions">S3BucketOptions</a></code> | *No description.* |
-| <code><a href="#@DanielMSchmidt/cdktf-s3-hybrid-module.S3Bucket.property.s3Module">s3Module</a></code> | <code><a href="#@DanielMSchmidt/cdktf-s3-hybrid-module.S3Bucket">S3Bucket</a></code> | *No description.* |
+| <code><a href="#@danielmschmidt/cdktf-s3-hybrid-module.S3Bucket.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#@danielmschmidt/cdktf-s3-hybrid-module.S3Bucket.property.config">config</a></code> | <code><a href="#@danielmschmidt/cdktf-s3-hybrid-module.S3BucketOptions">S3BucketOptions</a></code> | *No description.* |
+| <code><a href="#@danielmschmidt/cdktf-s3-hybrid-module.S3Bucket.property.s3Module">s3Module</a></code> | <code><a href="#@danielmschmidt/cdktf-s3-hybrid-module.S3Bucket">S3Bucket</a></code> | *No description.* |
 
 ---
 
-##### `node`<sup>Required</sup> <a name="node" id="@DanielMSchmidt/cdktf-s3-hybrid-module.S3Bucket.property.node"></a>
+##### `node`<sup>Required</sup> <a name="node" id="@danielmschmidt/cdktf-s3-hybrid-module.S3Bucket.property.node"></a>
 
 ```typescript
 public readonly node: Node;
@@ -141,35 +141,35 @@ The tree node.
 
 ---
 
-##### `config`<sup>Required</sup> <a name="config" id="@DanielMSchmidt/cdktf-s3-hybrid-module.S3Bucket.property.config"></a>
+##### `config`<sup>Required</sup> <a name="config" id="@danielmschmidt/cdktf-s3-hybrid-module.S3Bucket.property.config"></a>
 
 ```typescript
 public readonly config: S3BucketOptions;
 ```
 
-- *Type:* <a href="#@DanielMSchmidt/cdktf-s3-hybrid-module.S3BucketOptions">S3BucketOptions</a>
+- *Type:* <a href="#@danielmschmidt/cdktf-s3-hybrid-module.S3BucketOptions">S3BucketOptions</a>
 
 ---
 
-##### `s3Module`<sup>Required</sup> <a name="s3Module" id="@DanielMSchmidt/cdktf-s3-hybrid-module.S3Bucket.property.s3Module"></a>
+##### `s3Module`<sup>Required</sup> <a name="s3Module" id="@danielmschmidt/cdktf-s3-hybrid-module.S3Bucket.property.s3Module"></a>
 
 ```typescript
 public readonly s3Module: S3Bucket;
 ```
 
-- *Type:* <a href="#@DanielMSchmidt/cdktf-s3-hybrid-module.S3Bucket">S3Bucket</a>
+- *Type:* <a href="#@danielmschmidt/cdktf-s3-hybrid-module.S3Bucket">S3Bucket</a>
 
 ---
 
 
 ## Structs <a name="Structs" id="Structs"></a>
 
-### NotificationOptions <a name="NotificationOptions" id="@DanielMSchmidt/cdktf-s3-hybrid-module.NotificationOptions"></a>
+### NotificationOptions <a name="NotificationOptions" id="@danielmschmidt/cdktf-s3-hybrid-module.NotificationOptions"></a>
 
-#### Initializer <a name="Initializer" id="@DanielMSchmidt/cdktf-s3-hybrid-module.NotificationOptions.Initializer"></a>
+#### Initializer <a name="Initializer" id="@danielmschmidt/cdktf-s3-hybrid-module.NotificationOptions.Initializer"></a>
 
 ```typescript
-import { NotificationOptions } from '@DanielMSchmidt/cdktf-s3-hybrid-module'
+import { NotificationOptions } from '@danielmschmidt/cdktf-s3-hybrid-module'
 
 const notificationOptions: NotificationOptions = { ... }
 ```
@@ -178,12 +178,12 @@ const notificationOptions: NotificationOptions = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@DanielMSchmidt/cdktf-s3-hybrid-module.NotificationOptions.property.filterPrefix">filterPrefix</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@DanielMSchmidt/cdktf-s3-hybrid-module.NotificationOptions.property.filterSuffix">filterSuffix</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@danielmschmidt/cdktf-s3-hybrid-module.NotificationOptions.property.filterPrefix">filterPrefix</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@danielmschmidt/cdktf-s3-hybrid-module.NotificationOptions.property.filterSuffix">filterSuffix</a></code> | <code>string</code> | *No description.* |
 
 ---
 
-##### `filterPrefix`<sup>Optional</sup> <a name="filterPrefix" id="@DanielMSchmidt/cdktf-s3-hybrid-module.NotificationOptions.property.filterPrefix"></a>
+##### `filterPrefix`<sup>Optional</sup> <a name="filterPrefix" id="@danielmschmidt/cdktf-s3-hybrid-module.NotificationOptions.property.filterPrefix"></a>
 
 ```typescript
 public readonly filterPrefix: string;
@@ -193,7 +193,7 @@ public readonly filterPrefix: string;
 
 ---
 
-##### `filterSuffix`<sup>Optional</sup> <a name="filterSuffix" id="@DanielMSchmidt/cdktf-s3-hybrid-module.NotificationOptions.property.filterSuffix"></a>
+##### `filterSuffix`<sup>Optional</sup> <a name="filterSuffix" id="@danielmschmidt/cdktf-s3-hybrid-module.NotificationOptions.property.filterSuffix"></a>
 
 ```typescript
 public readonly filterSuffix: string;
@@ -203,12 +203,12 @@ public readonly filterSuffix: string;
 
 ---
 
-### S3BucketOptions <a name="S3BucketOptions" id="@DanielMSchmidt/cdktf-s3-hybrid-module.S3BucketOptions"></a>
+### S3BucketOptions <a name="S3BucketOptions" id="@danielmschmidt/cdktf-s3-hybrid-module.S3BucketOptions"></a>
 
-#### Initializer <a name="Initializer" id="@DanielMSchmidt/cdktf-s3-hybrid-module.S3BucketOptions.Initializer"></a>
+#### Initializer <a name="Initializer" id="@danielmschmidt/cdktf-s3-hybrid-module.S3BucketOptions.Initializer"></a>
 
 ```typescript
-import { S3BucketOptions } from '@DanielMSchmidt/cdktf-s3-hybrid-module'
+import { S3BucketOptions } from '@danielmschmidt/cdktf-s3-hybrid-module'
 
 const s3BucketOptions: S3BucketOptions = { ... }
 ```
@@ -217,11 +217,11 @@ const s3BucketOptions: S3BucketOptions = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@DanielMSchmidt/cdktf-s3-hybrid-module.S3BucketOptions.property.bucket">bucket</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@danielmschmidt/cdktf-s3-hybrid-module.S3BucketOptions.property.bucket">bucket</a></code> | <code>string</code> | *No description.* |
 
 ---
 
-##### `bucket`<sup>Required</sup> <a name="bucket" id="@DanielMSchmidt/cdktf-s3-hybrid-module.S3BucketOptions.property.bucket"></a>
+##### `bucket`<sup>Required</sup> <a name="bucket" id="@danielmschmidt/cdktf-s3-hybrid-module.S3BucketOptions.property.bucket"></a>
 
 ```typescript
 public readonly bucket: string;
