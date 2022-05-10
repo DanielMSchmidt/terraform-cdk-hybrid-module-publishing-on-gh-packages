@@ -16,6 +16,7 @@
     "eslint": "npx projen eslint",
     "package": "npx projen package",
     "package-all": "npx projen package-all",
+    "package:dotnet": "npx projen package:dotnet",
     "package:java": "npx projen package:java",
     "package:js": "npx projen package:js",
     "post-compile": "npx projen post-compile",
@@ -55,13 +56,13 @@
     "jest-junit": "^13",
     "jsii": "^1.58.0",
     "jsii-diff": "^1.58.0",
-    "jsii-docgen": "^7.0.5",
+    "jsii-docgen": "^7.0.6",
     "jsii-pacmak": "^1.58.0",
     "json-schema": "^0.4.0",
     "npm-check-updates": "^12",
     "prettier": "^2.6.2",
-    "projen": "^0.55.12",
-    "projen-cdktf-hybrid-construct": "^0.1.66",
+    "projen": "^0.56.3",
+    "projen-cdktf-hybrid-construct": "^0.1.67",
     "standard-version": "^9",
     "ts-jest": "^27",
     "ts-node": "^10.7.0",
@@ -73,7 +74,7 @@
     "constructs": "^10.0.107"
   },
   "dependencies": {
-    "cdktf-tf-module-stack": "^0.0.57"
+    "cdktf-tf-module-stack": "^0.0.58"
   },
   "bundledDependencies": [
     "cdktf-tf-module-stack"
@@ -145,6 +146,10 @@
           "groupId": "com.danielmschmidt",
           "artifactId": "terraform_cdk_hybrid_module_publishing_on_gh_packages"
         }
+      },
+      "dotnet": {
+        "namespace": "Danielmschmidt.TerraformCdkHybridModulePublishingOnGhPackages",
+        "packageId": "Danielmschmidt.TerraformCdkHybridModulePublishingOnGhPackages"
       }
     },
     "tsc": {

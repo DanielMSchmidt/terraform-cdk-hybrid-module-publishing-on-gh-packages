@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MyConstruct can add a lambda trigger 1`] = `
+"{
+  \\"module\\": {
+    \\"my-bucket_019C00C9\\": {
+      \\"bucket\\": \\"my-bucket\\",
+      \\"force_destroy\\": true,
+      \\"source\\": \\"terraform-aws-modules/s3-bucket/aws\\"
+    },
+    \\"my-bucket_notification-0_F3E56F61\\": {
+      \\"bucket\\": \\"\${module.my-bucket_019C00C9.s3_bucket_id}\\",
+      \\"eventbridge\\": true,
+      \\"lambda_notifications\\": [
+        {
+          \\"lambda\\": {
+            \\"event_type\\": \\"s3:ObjectCreated:Post\\",
+            \\"filterPrefix\\": \\"my-upload\\",
+            \\"filterSuffix\\": \\".png\\",
+            \\"function_arn\\": \\"\${aws_lambda_function.my-lambda.arn}\\",
+            \\"function_name\\": \\"\${aws_lambda_function.my-lambda.function_name}\\"
+          }
+        }
+      ],
+      \\"source\\": \\"terraform-aws-modules/s3-bucket/aws//modules/notification\\"
+    }
+  },
+  \\"provider\\": {
+    \\"aws\\": [
+      {
+        \\"region\\": \\"us-east-1\\"
+      }
+    ]
+  },
+  \\"resource\\": {
+    \\"aws_lambda_function\\": {
+      \\"my-lambda\\": {
+        \\"function_name\\": \\"my-lambda\\",
+        \\"role\\": \\"my-role\\"
+      }
+    }
+  },
+  \\"terraform\\": {
+    \\"required_providers\\": {
+      \\"aws\\": {
+        \\"source\\": \\"aws\\",
+        \\"version\\": \\"4.12.1\\"
+      }
+    }
+  }
+}"
+`;
+
+exports[`MyConstruct should synthesize 1`] = `
+"{
+  \\"module\\": {
+    \\"my-bucket_019C00C9\\": {
+      \\"bucket\\": \\"my-bucket\\",
+      \\"force_destroy\\": true,
+      \\"source\\": \\"terraform-aws-modules/s3-bucket/aws\\"
+    }
+  },
+  \\"provider\\": {
+    \\"aws\\": [
+      {
+        \\"region\\": \\"us-east-1\\"
+      }
+    ]
+  },
+  \\"terraform\\": {
+    \\"required_providers\\": {
+      \\"aws\\": {
+        \\"source\\": \\"aws\\",
+        \\"version\\": \\"4.12.1\\"
+      }
+    }
+  }
+}"
+`;
