@@ -1,7 +1,6 @@
 import {
   HybridModule,
   publishToGithubPackages,
-  publishToRegistries,
 } from "projen-cdktf-hybrid-construct";
 
 const publishConfig = publishToGithubPackages({
