@@ -45,6 +45,7 @@ provider "aws" {
   },
 });
 
+project.addDevDeps("jest@=28.1.0");
 project.addBundledDeps("cdktf-tf-module-stack");
 project.addPeerDeps("cdktf@^0.10.4");
 project.addPeerDeps("@cdktf/provider-aws@^7.0.45");

@@ -1,8 +1,8 @@
+import { AwsProvider } from "@cdktf/provider-aws";
 import { LambdaFunction } from "@cdktf/provider-aws/lib/lambdafunction";
 import { Testing } from "cdktf";
 import "cdktf/lib/testing/adapters/jest";
-import { S3Bucket } from "../";
-import { AwsProvider } from "@cdktf/provider-aws";
+import { S3Bucket } from "..";
 
 // To learn more about testing see cdk.tf/testing
 describe("MyConstruct", () => {

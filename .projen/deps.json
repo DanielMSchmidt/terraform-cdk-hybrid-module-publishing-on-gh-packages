@@ -71,7 +71,7 @@
     },
     {
       "name": "jest",
-      "version": "^27",
+      "version": "=28.1.0",
       "type": "build"
     },
     {
