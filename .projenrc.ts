@@ -4,23 +4,11 @@ import {
   publishToRegistries,
 } from "projen-cdktf-hybrid-construct";
 
-const repositoryOwner = "danielmschmidt";
 const publishConfig = publishToGithubPackages({
   repositoryName: "terraform-cdk-hybrid-module-publishing-on-gh-packages",
-  repositoryOwner,
-  registries: ["npm", "maven"],
+  repositoryOwner: "danielmschmidt",
+  registries: ["npm", "maven", "nuget"],
 });
-
-const nugetConf = publishToRegistries({
-  name: "terraform-cdk-hybrid-module-publishing-on-gh-packages",
-  namespace: repositoryOwner,
-  registries: ["nuget"],
-}).publishToNuget!;
-publishConfig.publishToNuget = {
-  dotNetNamespace: nugetConf.dotNetNamespace,
-  packageId: nugetConf.packageId,
-  nugetServer: `https://nuget.pkg.github.com/${repositoryOwner}`,
-};
 
 const project = new HybridModule({
   ...publishConfig,
